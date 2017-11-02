@@ -1,0 +1,6 @@
+ style="background: rgb(223, 32, 64);//salmao
+ style="background: rgb(106, 110, 119); cinza 1
+ style="background: rgb(106, 106, 114); cinza 2 
+ style="background: rgb(255, 0, 0); vermelho bdmg
+ style="background: rgb(0, 0, 0); preto
+ style="background: #fffff"; branco
