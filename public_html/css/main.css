@@ -65,7 +65,7 @@ main > section {
 }
 
 .btn-blue {
-    background-color: rgb(223, 32, 64);
+    background-color: #009EE3;
     box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15) inset;
     padding: 15px 55px;
     color: #fff;
@@ -609,13 +609,7 @@ h1.navbar-brand {
     font-size: 20px;
     text-transform: uppercase;
 }
-.textobranco {
-   color: #fff !important; 
-}
 
-.textobranco:hover {
-    color:rgb(106, 110, 119) !important;
-}
 
 /*=================================================================
 	Portfolio
