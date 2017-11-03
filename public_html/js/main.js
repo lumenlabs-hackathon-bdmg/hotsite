@@ -168,6 +168,36 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+    /* ========================================================================= */
+    /*  Simulador
+    /* ========================================================================= */
+
+    $("#planos").hide();
+
+    $("#calcular").click(function(){
+        var conta = parseFloat($("#valor-conta").val());
+        var prazos = [simular(12, 10, conta), simular(24, 10, conta), simular(36, 10, conta), simular(48, 10, conta), simular(60, 10, conta)];
+
+        $("#p12").html("Entrada de R$ " + prazos[0].entrada + " <br> +<b> 12 parcelas de R$ " + prazos[0].parcela + "</b>");
+        $("#p24").html("Entrada de R$ " + prazos[1].entrada + " <br> +<b> 24 parcelas de R$ " + prazos[1].parcela + "</b>");
+        $("#p36").html("Entrada de R$ " + prazos[2].entrada + " <br> +<b> 36 parcelas de R$ " + prazos[2].parcela + "</b>");
+        $("#p48").html("Entrada de R$ " + prazos[3].entrada + " <br> +<b> 48 parcelas de R$ " + prazos[3].parcela + "</b>");
+        $("#p60").html("Entrada de R$ " + prazos[4].entrada + " <br> +<b> 60 parcelas de R$ " + prazos[4].parcela + "</b>");
+        
+        /*$("#parcela24").text(prazos[1].parcela);
+        $("#parcela36").text(prazos[2].parcela);
+        $("#parcela48").text(prazos[3].parcela);
+        $("#parcela60").text(prazos[4].parcela);
+
+        $("#entrada12").text(prazos[0].entrada);
+        $("#entrada24").text(prazos[1].entrada);
+        $("#entrada36").text(prazos[2].entrada);
+        $("#entrada48").text(prazos[3].entrada);
+        $("#entrada60").text(prazos[4].entrada);*/
+
+        $("#planos").show();
+    });
 	
 });
 
