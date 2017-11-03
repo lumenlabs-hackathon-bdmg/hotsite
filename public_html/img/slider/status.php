@@ -16,15 +16,10 @@ function getQueryVariable(variable) {
       return pair[1];
     }
   } 
-  return "sfsd"
+  alert('Query Variable ' + variable + ' not found');
 
+  alert(pa)
 }
-
-
-if(pa != "ok") {
-    window.location.href = "fail.html";
-}
-
 </script>
 
     <head>
@@ -102,10 +97,10 @@ if(pa != "ok") {
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <ul class="nav navbar-nav">
 						<li><a href="index.html">Home</a></li>
-						<li><a href="index.html#service" target="_blank">vantagens</a></li>
-                        <li><a href="index.html#simulador" target="_blank">Simule o Investimento</a></li>
+						<li><a href="blog/index.html">Blog</a></li>
+                        <li><a href="#service">Simulador</a></li>
                         <li><a href="integradores.html">Integradores</a></li>
-                        <li><a href="blog/index.html">Blog</a></li>
+                        <li><a href="#contact">Contato</a></li>
                     </ul>
                 </nav>
 				<!-- /main nav -->
@@ -123,9 +118,9 @@ if(pa != "ok") {
 				<div class="row">
 					
 					<div class="sec-title text-center wow animated fadeInDown">
-						<h2>Seu pedido foi pré-aprovado</h2>
-                        <p>O banco pré aprovou seu pedido, agora você pode contactar a integradora de sua preferência</p>
-                        <a style="margin-top: 90px"href="integradores.html" type="button" class="btn btn-primary btn-lg">Veja os integradores ao seu redor</a>
+						<h2>Seu pedido foi autorizado com sucesso</h2>
+                        <p>O banco autorizou seu pedido, agora você pode contactar a integradora de sua preferência</p>
+                        <a style="margin-top: 90px"href="../integradores.html" type="button" class="btn btn-primary btn-lg">Veja os integradores ao seu redor</a>
 					</div>
 					
 					
