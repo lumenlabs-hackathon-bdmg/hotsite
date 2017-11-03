@@ -4,29 +4,6 @@
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-<script> 
-    var pa = getQueryVariable("result");
-
-function getQueryVariable(variable) {
-  var query = window.location.search.substring(1);
-  var vars = query.split("&");
-  for (var i=0;i<vars.length;i++) {
-    var pair = vars[i].split("=");
-    if (pair[0] == variable) {
-      return pair[1];
-    }
-  } 
-  return "sfsd"
-
-}
-
-
-if(pa != "ok") {
-    window.location.href = "fail.html";
-}
-
-</script>
-
     <head>
     	<!-- meta character set -->
         <meta charset="utf-8">
@@ -123,9 +100,8 @@ if(pa != "ok") {
 				<div class="row">
 					
 					<div class="sec-title text-center wow animated fadeInDown">
-						<h2>Seu pedido foi autorizado com sucesso</h2>
-                        <p>O banco autorizou seu pedido, agora você pode contactar a integradora de sua preferência</p>
-                        <a style="margin-top: 90px"href="../integradores.html" type="button" class="btn btn-primary btn-lg">Veja os integradores ao seu redor</a>
+						<h2>Seu pedido não pode ser inteiramente efetivado</h2>
+                        <p>Infelizmente não podemos liberar o valor solicitado, enviamos ao seu email uma nova proposta</p>
 					</div>
 					
 					

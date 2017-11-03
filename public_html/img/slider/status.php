@@ -16,15 +16,10 @@ function getQueryVariable(variable) {
       return pair[1];
     }
   } 
-  return "sfsd"
+  alert('Query Variable ' + variable + ' not found');
 
+  alert(pa)
 }
-
-
-if(pa != "ok") {
-    window.location.href = "fail.html";
-}
-
 </script>
 
     <head>
