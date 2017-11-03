@@ -1,168 +1,543 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
-    <title>Login and Register tabbed form - Bootsnipp.com</title>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+    	<!-- meta character set -->
+        <meta charset="utf-8">
+		<!-- Always force latest IE rendering engine or request Chrome Frame -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>BDMG- Simule agora!</title>		
+		<!-- Meta Description -->
+        <meta name="description" content="Landing page da bdmg para financiamentos">
+        <meta name="keywords" content="bdmg, financiamento, energia solar, emprestimo, integrador, simule agora">
+        <meta name="author" content="Daniel Henrique, Gustavo, Daniel Peixoto e Tales">
+		
+		<!-- Mobile Specific Meta -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-        body {
-    padding-top: 90px;
-}
-.panel-login {
-	border-color: #ccc;
-	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-}
-.panel-login>.panel-heading {
-	color: #00415d;
-	background-color: #fff;
-	border-color: #fff;
-	text-align:center;
-}
-.panel-login>.panel-heading a{
-	text-decoration: none;
-	color: #666;
-	font-weight: bold;
-	font-size: 15px;
-	-webkit-transition: all 0.1s linear;
-	-moz-transition: all 0.1s linear;
-	transition: all 0.1s linear;
-}
-.panel-login>.panel-heading a.active{
-	color: #029f5b;
-	font-size: 18px;
-}
-.panel-login>.panel-heading hr{
-	margin-top: 10px;
-	margin-bottom: 0px;
-	clear: both;
-	border: 0;
-	height: 1px;
-	background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
-	background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
-	background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
-	background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
-}
-.panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
-	height: 45px;
-	border: 1px solid #ddd;
-	font-size: 16px;
-	-webkit-transition: all 0.1s linear;
-	-moz-transition: all 0.1s linear;
-	transition: all 0.1s linear;
-}
-.panel-login input:hover,
-.panel-login input:focus {
-	outline:none;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	border-color: #ccc;
-}
-.btn-login {
-	background-color: #59B2E0;
-	outline: none;
-	color: #fff;
-	font-size: 14px;
-	height: auto;
-	font-weight: normal;
-	padding: 14px 0;
-	text-transform: uppercase;
-	border-color: #59B2E6;
-}
-.btn-login:hover,
-.btn-login:focus {
-	color: #fff;
-	background-color: #53A3CD;
-	border-color: #53A3CD;
-}
-.forgot-password {
-	text-decoration: underline;
-	color: #888;
-}
-.forgot-password:hover,
-.forgot-password:focus {
-	text-decoration: underline;
-	color: #666;
-}
+		
+		<!-- CSS
+		================================================== -->
+		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+		
+		<!-- Fontawesome Icon font -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/jquery.fancybox.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/slit-slider.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/animate.css">
+		<!-- Main Stylesheet -->
+        <link rel="stylesheet" href="css/main.css">
 
-.btn-register {
-	background-color: #1CB94E;
-	outline: none;
-	color: #fff;
-	font-size: 14px;
-	height: auto;
-	font-weight: normal;
-	padding: 14px 0;
-	text-transform: uppercase;
-	border-color: #1CB94A;
-}
-.btn-register:hover,
-.btn-register:focus {
-	color: #fff;
-	background-color: #1CA347;
-	border-color: #1CA347;
-}
+		<!-- Modernizer Script for old Browsers -->
+        <script src="js/modernizr-2.6.2.min.js"></script>
 
-    </style>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-</head>
-<body>
-	<div class="container">
-        <div class="row centered-form"> 
-        <div class="col-xs-12 col-md-6 col-md-offset-3">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                        <h3 class="panel-title">Tenha sua solução personalizada <br>
-                            <small>Funciona, e é rápido</small></h3>
-                            </div>
-                            <div class="panel-body">
-                        <form role="form">
-                            <div class="form-group">
-                                    <div class="form-group">
-                            <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="Razão social">
-                                    </div>
-                                </div>
-                            
-                            <div class="form-group">
-                                <div class="form-group">
-                                    <input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="CNPJ">
-                                </div>
-                            </div>
+    </head>
+	
+    <body id="body">
 
-                            <div class="form-group">
-                                <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email">
-                            </div>
+		<!-- preloader -->
+		<div id="preloader">
+            <div class="loder-box">
+            	<div class="battery"></div>
+            </div>
+		</div>
+		<!-- end preloader -->
 
-                            <div class="row">
-                                <div class="col-xs-6 col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Senha">
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirme a Senha">
-                                    </div>
-                                </div>
-							</div>
-							
-							<label>
-								Insira a documentação
-							</label>
-							<div class="form-group">
-								<input type="file" name="file" id="file" class="form-control input-sm" placeholder="Insira documentação">
-							</div>
-							
-							<a href="request_done.html"  class="btn btn-info btn-block">Cadastrar</a>
-                        
-                        </form>
-                    </div>
+        <!--
+        Fixed Navigation
+        ==================================== -->
+        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- responsive nav button -->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+                    </button>
+					<!-- /responsive nav button -->
+					
+					<!-- logo -->
+					<h1 class="navbar-brand">
+						<a href="#body">BDMG</a>
+					</h1>
+					<!-- /logo -->
                 </div>
-           
-</body>
+
+				<!-- main nav -->
+                <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                    <ul id="nav" class="nav navbar-nav">
+                        <li><a href="#body">Home</a></li>
+                        <li><a href="#service">Simulador</a></li>
+                        <li><a href="#portfolio">Entre em contato</a></li>
+                        <li><a href="#price">Integradores</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </nav>
+				<!-- /main nav -->
+				
+            </div>
+
+        </header>
+        <!--
+        End Fixed Navigation
+        ==================================== -->
+		
+		<main class="site-content" role="main">
+		
+			
+			 <!--
+        Home Slider
+        ==================================== -->
+		
+		<section id="home-slider">
+            <div id="slider" class="sl-slider-wrapper">
+
+				<div class="sl-slider">
+				
+					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+
+						<div class="bg-img bg-img-1"></div>
+
+						<div class="slide-caption">
+                            <div class="caption-content">
+                                <h2 class="animated fadeInDown">O Planeta sonhou, O BDMG Realiza</h2>
+                              
+                            </div>
+                        </div>
+						
+					</div>
+					
+				
+
+				</div>
+
+			</div><!-- /slider-wrapper -->
+		</section>
+
+
+		<!-- Service section -->
+		<section id="service">
+			<div class="container">
+				<div class="row">
+				
+					<div class="sec-title text-center">
+						<h2 class="wow animated bounceInLeft">Razões para amar energia solar</h2>
+						<p class="wow animated bounceInRight">A direção que o mundo caminha</p>
+					</div>
+					
+					<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn">
+						<div class="service-item">
+							<div class="service-icon">
+								<i class="fa fa-home fa-3x"></i>
+							</div>
+							<h3>Economia na sua conta</h3>
+							<p>Reduza drasticamente seus gastos com energia </p>
+						</div>
+					</div>
+				
+					<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.3s">
+						<div class="service-item">
+							<div class="service-icon">
+								<i class="fa fa-home fa-3x"></i>
+							</div>
+							<h3>Valorização do seu imóvel</h3>
+							<p>Seu imóvel é imeditatamente valorizado, é um dinheiro que você não perde</p>
+						</div>
+					</div>
+				
+					<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
+						<div class="service-item">
+							<div class="service-icon">
+								<i class="fa fa-clock-o fa-3x"></i>
+							</div>
+							<h3>Modularização</h3>
+							<p>Aproveite-se da capacidade modular das placas e mantenha seu próprio ritmo. </p>
+						</div>
+					</div>
+				
+					<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.9s">
+						<div class="service-item">
+							<div class="service-icon">
+								<i class="fa fa-heart fa-3x"></i>
+							</div>
+							
+							<h3>Eco Frinedly</h3>
+							<p>Distingua-se dos competidores se tornando uma marca ecológica </p>							
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<!-- end Service section -->
+		
+		
+		
+		
+		<!-- Price section--
+		<section id="price">
+			<div class="container">
+				<div class="row">
+				
+					<div class="sec-title text-center wow animated fadeInDown">
+						<h2>Price</h2>
+						<p></p>
+					</div>
+					
+					<div class="wow animated fadeInUp">
+						<div class="price-table text-center">
+							
+							<ul>
+								<li>No Bonus Points</li>
+								<li>No Bonus Points</li>
+								<li>No Bonus Points</li>
+								<li>No Bonus Points</li>
+								<li><a href="#">sign up</a></li>
+							</ul>
+						</div>
+					</div>
+	
+				</div>
+			</div>
+		</section>
+		<!-- end Price section -->
+		
+		<!-- end Social section -->
+		
+		<!-- Contact section
+		<section id="contact" >
+			<div class="container">
+				<div class="row">
+					
+					<div class="sec-title text-center wow animated fadeInDown">
+						<h2>Entre em contato conosco!</h2>
+						<p>Leave a Message</p>
+					</div>
+					
+					
+					<div class="col-md-7 contact-form wow animated fadeInLeft">
+						<form action="#" method="post">
+							<div class="input-field">
+								<input type="text" name="name" class="form-control" placeholder="Your Name...">
+							</div>
+							<div class="input-field">
+								<input type="email" value="j@g.com" name="email" class="form-control" placeholder="Your Email...">
+							</div>
+							<div class="input-field">
+								<input type="text" name="subject" class="form-control" placeholder="Subject...">
+							</div>
+							<div class="input-field">
+								<textarea name="message" class="form-control" placeholder="Messages..."></textarea>
+							</div>
+					       	<button type="submit" id="submit" class="btn btn-blue btn-effect">Send</button>
+						</form>
+					</div>
+
+
+					
+					<div class="col-md-5 wow animated fadeInRight">
+						<address class="contact-details">
+							<h3>Contact Us</h3>						
+							<p><i class="fa fa-pencil"></i>Phoenix Inc.<span>PO Box 345678</span> <span>Little Lonsdale St, Melbourne </span><span>Australia</span></p><br>
+							<p><i class="fa fa-phone"></i>Phone: (415) 124-5678 </p>
+							<p><i class="fa fa-envelope"></i>website@yourname.com</p>
+						</address>
+					</div>
+		
+				</div>
+			</div>
+		</section>
+		end Contact section -->
+
+		<!-- Contact section -->
+		<section id="simulador" >
+			<div class="container">
+				<div class="row">
+					
+					<div class="sec-title text-center wow animated fadeInDown">
+						<h2>Simule sua economia e as opções de financiamento</h2>
+						<p>O Financiamento para Energia Solar do BDMG é uma linha de crédito especial para o empreendedor visionário que pretende investir em um projeto de placas solares e obter economia financeira através da redução na conta de luz, valorizar o seu negócio e contribuir para um planeta mais sustentável.</p>
+					</div>
+					
+					
+					<div class="col-md-7 contact-form wow animated fadeInLeft">
+						<!--<form action="#" method="post">-->
+							<div class="input-field">
+								<input type="text" id="valor-conta" name="valor-conta" class="form-control" placeholder="Informe o quanto deseja economizar mensalmente na conta de luz">
+							</div>
+							<!--<div class="input-field">
+								<input type="email" value="j@g.com" name="email" class="form-control" placeholder="Your Email...">
+							</div>
+							<div class="input-field">
+								<input type="text" name="subject" class="form-control" placeholder="Subject...">
+							</div>
+							<div class="input-field">
+								<textarea name="message" class="form-control" placeholder="Messages..."></textarea>
+							</div>-->
+					       	<button id="calcular" class="btn btn-blue btn-effect">Calcular</button>
+						<!--</form>-->
+					</div>
+					
+					<div id="planos" class="col-md-5 wow animated fadeInRight">						
+						<div class="contact-details" style="text-align: center;">
+							<h3>Escolha um plano de financiamento</h3>						
+							<div id="f12" style="border:1px solid black; margin-bottom: 30px; padding: 1em;">								
+								<p id="p12"></p>
+								<button class="btn btn-blue btn-effect"><a href="login_and_register_tabbed_form.html" target="_blank"> Escolher plano</button>
+							</div>	
+							<div id="f24" style="border:1px solid black; margin-bottom: 30px; padding: 1em;">								
+								<p id="p24"></p>
+								<button class="btn btn-blue btn-effect"><a href="login_and_register_tabbed_form.html" target="_blank"> Escolher plano</button>
+							</div>
+							<div id="f36" style="border:1px solid black; margin-bottom: 30px; padding: 1em;">								
+								<p id="p36"></p>
+								<button class="btn btn-blue btn-effect"><a href="login_and_register_tabbed_form.html" target="_blank"> Escolher plano</button>
+							</div>
+							<div id="f48" style="border:1px solid black; margin-bottom: 30px; padding: 1em;">								
+								<p id="p48"></p>
+								<button class="btn btn-blue btn-effect"><a href="login_and_register_tabbed_form.html" target="_blank"> Escolher plano</button>
+							</div>		
+							<div id="f60" style="border:1px solid black; margin-bottom: 30px; padding: 1em;">								
+								<p id="p60"></p>
+								<button class="btn btn-blue btn-effect"><a href="login_and_register_tabbed_form.html" target="_blank"> Escolher plano</button>
+							</div>				
+							<!--<p><i class="fa fa-pencil"></i>Phoenix Inc.<span>PO Box 345678</span> <span>Little Lonsdale St, Melbourne </span><span>Australia</span></p><br>
+							<p><i class="fa fa-phone"></i>Phone: (415) 124-5678 </p>
+							<p><i class="fa fa-envelope"></i>website@yourname.com</p>
+						</div>-->
+					</div>
+		
+				</div>
+			</div>
+		
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/595f9a9e1dc79b329518d221/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+		</footer>
+
+		
+		<!-- Essential jQuery Plugins
+		================================================== -->
+		<!-- Main jQuery -->
+        <script src="js/jquery-1.11.1.min.js"></script>
+		<!-- Twitter Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+		<!-- Single Page Nav -->
+        <script src="js/jquery.singlePageNav.min.js"></script>
+		<!-- jquery.fancybox.pack -->
+        <script src="js/jquery.fancybox.pack.js"></script>
+		<!-- Google Map API -->
+		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<!-- Owl Carousel -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- jquery easing -->
+        <script src="js/jquery.easing.min.js"></script>
+        <!-- Fullscreen slider -->
+        <script src="js/jquery.slitslider.js"></script>
+        <script src="js/jquery.ba-cond.min.js"></script>
+		<!-- onscroll animation -->
+        <script src="js/wow.min.js"></script>
+		<!-- Custom Functions -->        
+        <script src="js/simular.js"></script>
+        <script src="js/main.js"></script>
+        		    	
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+    	<!-- meta character set -->
+        <meta charset="utf-8">
+		<!-- Always force latest IE rendering engine or request Chrome Frame -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>BDMG- Simule agora!</title>		
+		<!-- Meta Description -->
+        <meta name="description" content="Landing page da bdmg para financiamentos">
+        <meta name="keywords" content="bdmg, financiamento, energia solar, emprestimo, integrador, simule agora">
+        <meta name="author" content="Daniel Henrique, Gustavo, Daniel Peixoto e Tales">
+		
+		<!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- CSS
+		================================================== -->
+		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+		
+		<!-- Fontawesome Icon font -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/jquery.fancybox.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/slit-slider.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/animate.css">
+		<!-- Main Stylesheet -->
+        <link rel="stylesheet" href="css/main.css">
+
+		<!-- Modernizer Script for old Browsers -->
+        <script src="js/modernizr-2.6.2.min.js"></script>
+
+    </head>
+	
+    <body id="body">
+
+		<!-- preloader -->
+		<div id="preloader">
+            <div class="loder-box">
+            	<div class="battery"></div>
+            </div>
+		</div>
+		<!-- end preloader -->
+
+        <!--
+        Fixed Navigation
+        ==================================== -->
+        
+        <!--
+        End Fixed Navigation
+        ==================================== -->
+		
+		<main class="site-content" role="main">
+		
+			
+			 <!--
+        Home Slider
+        ==================================== -->
+		
+		<div class="container">
+				<div class="row centered-form"> 
+				<div class="col-xs-12 col-md-6 col-md-offset-3">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+								<h3 class="panel-title">Tenha sua solução personalizada <br>
+									<small>Funciona, e é rápido</small></h3>
+									</div>
+									<div class="panel-body">
+								<form role="form">
+									<div class="form-group">
+											<div class="form-group">
+									<input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="Razão social">
+											</div>
+										</div>
+									
+									<div class="form-group">
+										<div class="form-group">
+											<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="CNPJ">
+										</div>
+									</div>
+		
+									<div class="form-group">
+										<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email">
+									</div>
+		
+									<div class="row">
+										<div class="col-xs-6 col-sm-6 col-md-6">
+											<div class="form-group">
+												<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Senha">
+											</div>
+										</div>
+										<div class="col-xs-6 col-sm-6 col-md-6">
+											<div class="form-group">
+												<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirme a Senha">
+											</div>
+										</div>
+									</div>
+									
+									<label>
+										Insira a documentação
+									</label>
+									<div class="form-group">
+										<input type="file" name="file" id="file" class="form-control input-sm" placeholder="Insira documentação">
+									</div>
+									
+									<a href="request_done.html"  class="btn btn-info btn-block">Cadastrar</a>
+								
+								</form>
+							</div>
+						</div>
+		
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/595f9a9e1dc79b329518d221/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+		</footer>
+
+		
+		<!-- Essential jQuery Plugins
+		================================================== -->
+		<!-- Main jQuery -->
+        <script src="js/jquery-1.11.1.min.js"></script>
+		<!-- Twitter Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+		<!-- Single Page Nav -->
+        <script src="js/jquery.singlePageNav.min.js"></script>
+		<!-- jquery.fancybox.pack -->
+        <script src="js/jquery.fancybox.pack.js"></script>
+		<!-- Google Map API -->
+		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<!-- Owl Carousel -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- jquery easing -->
+        <script src="js/jquery.easing.min.js"></script>
+        <!-- Fullscreen slider -->
+        <script src="js/jquery.slitslider.js"></script>
+        <script src="js/jquery.ba-cond.min.js"></script>
+		<!-- onscroll animation -->
+        <script src="js/wow.min.js"></script>
+		<!-- Custom Functions -->        
+        <script src="js/simular.js"></script>
+        <script src="js/main.js"></script>
+        		    	
+    </body>
 </html>
