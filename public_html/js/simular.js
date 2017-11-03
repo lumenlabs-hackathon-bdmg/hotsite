@@ -100,14 +100,27 @@ function simular (prazo, entrada_percentual, valor_conta_energia, valor_consumo 
 	diferenca = desembolso_mensal - conta_energia;
 	diferenca_percent = diferenca / conta_energia;
 
+
+	var economia_anual = total_compensado * tarifa;
+
+
 	return {
 		//investimento: investimento.toFixed(2),
 		entrada: entrada.toFixed(2),
 		parcela: parcela_financiamento.toFixed(2),
-		desembolso_mensal: desembolso_mensal.toFixed(2)
+		desembolso_mensal: desembolso_mensal.toFixed(2),
+		economia_anual: economia_anual
 	};
 
 };
+
+/*function calcular_economia_anual () {
+
+}
+
+function payback () {
+	simular(12, 10, 1000)
+}*/
 
 //var prazos = [simular(12, 10, 1000), simular(24, 10, 1000), simular(36, 10, 1000), simular(48, 10, 1000), simular(60, 10, 1000)];
 
