@@ -174,6 +174,7 @@ $(document).ready(function(){
     /* ========================================================================= */
 
     $("#planos").hide();
+    $("#div-economia").hide();
 
     $("#calcular").click(function(){
         var conta = parseFloat($("#valor-conta").val());
@@ -184,6 +185,8 @@ $(document).ready(function(){
         $("#p36").html("Entrada de R$ " + prazos[2].entrada + " <br> +<b> 36 parcelas de R$ " + prazos[2].parcela + "</b>");
         $("#p48").html("Entrada de R$ " + prazos[3].entrada + " <br> +<b> 48 parcelas de R$ " + prazos[3].parcela + "</b>");
         $("#p60").html("Entrada de R$ " + prazos[4].entrada + " <br> +<b> 60 parcelas de R$ " + prazos[4].parcela + "</b>");
+
+        $("#economia-anual").html("R$" + prazos[4].economia_anual);
         
         /*$("#parcela24").text(prazos[1].parcela);
         $("#parcela36").text(prazos[2].parcela);
@@ -197,6 +200,7 @@ $(document).ready(function(){
         $("#entrada60").text(prazos[4].entrada);*/
 
         $("#planos").show();
+        $("#div-economia").show();
     });
 	
 });

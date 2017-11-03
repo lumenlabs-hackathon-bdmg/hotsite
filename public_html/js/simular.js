@@ -101,7 +101,7 @@ function simular (prazo, entrada_percentual, valor_conta_energia, valor_consumo 
 	diferenca_percent = diferenca / conta_energia;
 
 
-	var economia_anual = total_compensado * tarifa;
+	var economia_anual = (total_compensado * tarifa)*12;
 
 
 	return {
@@ -109,7 +109,7 @@ function simular (prazo, entrada_percentual, valor_conta_energia, valor_consumo 
 		entrada: entrada.toFixed(2),
 		parcela: parcela_financiamento.toFixed(2),
 		desembolso_mensal: desembolso_mensal.toFixed(2),
-		economia_anual: economia_anual
+		economia_anual: economia_anual.toFixed()
 	};
 
 };
